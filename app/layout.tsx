@@ -11,9 +11,37 @@ const archivo = Archivo({
   display: "swap",
 });
 
+/**
+ * metadataBase e o endereco final do site. Ele faz o Next transformar
+ * "/og.png" na URL completa, que e o que WhatsApp, Instagram e Google exigem
+ * para mostrar a previa do link. Caminho relativo nao funciona ali.
+ */
 export const metadata: Metadata = {
+  metadataBase: new URL("https://caio.agenciarigor.com.br"),
   title: site.title,
   description: site.description,
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://caio.agenciarigor.com.br",
+    siteName: site.name,
+    title: site.title,
+    description: site.description,
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: `${site.name}, desenvolvedor web`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.title,
+    description: site.description,
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({
