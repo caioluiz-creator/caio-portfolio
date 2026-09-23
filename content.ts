@@ -36,9 +36,9 @@ export const hero = {
   year: "©2026",
   since: "/CRIANDO DESDE 2024",
   /** Foto do topo: aparece pequena e em preto e branco. Corte fechado. */
-  avatar: "/img/caio.png",
+  avatar: "/img/caio.jpg",
   /** Foto da bio: aparece grande e colorida no scroll. Enquadramento aberto. */
-  avatarBio: "/img/caio-bio.png",
+  avatarBio: "/img/caio-bio.jpg",
 };
 
 export const bio = {

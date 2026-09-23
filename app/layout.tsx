@@ -13,7 +13,7 @@ const archivo = Archivo({
 
 /**
  * metadataBase e o endereco final do site. Ele faz o Next transformar
- * "/og.png" na URL completa, que e o que WhatsApp, Instagram e Google exigem
+ * "/og.jpg" na URL completa, que e o que WhatsApp, Instagram e Google exigem
  * para mostrar a previa do link. Caminho relativo nao funciona ali.
  */
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: site.description,
     images: [
       {
-        url: "/og.png",
+        url: "/og.jpg",
         width: 1200,
         height: 630,
         alt: `${site.name}, desenvolvedor web`,
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: site.title,
     description: site.description,
-    images: ["/og.png"],
+    images: ["/og.jpg"],
   },
 };
 
