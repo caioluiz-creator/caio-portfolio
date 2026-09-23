@@ -12,7 +12,7 @@ export const site = {
   /** Título da aba do navegador */
   title: "Caio Luiz | Portfólio",
   description:
-    "Criador de sites e identidades digitais. Portfólio pessoal e link na bio.",
+    "Sites, sistemas sob medida e identidades digitais. Portfólio pessoal e link na bio.",
   email: "nascimentocaio491@gmail.com",
   /** WhatsApp: o link usa o formato internacional (55 + DDD + numero) */
   whatsapp: {
@@ -43,10 +43,10 @@ export const hero = {
 
 export const bio = {
   greeting: "Olá!",
-  lead: "Sou o Caio Luiz, tenho 18 anos e crio sites e identidades digitais para marcas que querem ser levadas a sério.",
+  lead: "Sou o Caio Luiz, tenho 18 anos e construo sites, sistemas sob medida e identidades digitais para marcas que querem ser levadas a sério.",
   paragraphs: [
-    "Trabalho com design e desenvolvimento web, criando páginas rápidas, bonitas e feitas para converter, não só para enfeitar.",
-    "Já construí sites, landing pages e identidades para agências, lojas e projetos próprios, cuidando do visual e da parte técnica.",
+    "Trabalho da interface ao banco de dados: CRMs, painéis e automações que tiram o trabalho manual do caminho, com o mesmo cuidado visual de quem também constrói a identidade da marca.",
+    "Já entreguei sites, lojas virtuais e identidades digitais para agências, lojas e projetos próprios, sempre unindo o visual e a parte técnica.",
   ],
   cta: { label: "Fale comigo", href: "#contato" },
 };
@@ -59,10 +59,11 @@ export const quote = {
 export const services = {
   title: "Serviços",
   items: [
-    { name: "Criação de Sites", tags: ["Landing Page", "Institucional", "Link na bio"] },
-    { name: "Identidade Visual", tags: ["Logo", "Paleta", "Direção de arte"] },
-    { name: "Desenvolvimento Web", tags: ["React", "Next.js", "Performance"] },
-    { name: "Social Media", tags: ["Criativos", "Anúncios", "Conteúdo"] },
+    { name: "Sistemas Web sob medida", tags: ["CRM", "ERP", "Dashboards"] },
+    { name: "Sites e Landing Pages", tags: ["Institucional", "Página de vendas", "Link na bio"] },
+    { name: "Lojas Virtuais", tags: ["Shopify", "Checkout", "Catálogo"] },
+    { name: "Automações e Integrações", tags: ["APIs", "WhatsApp", "Relatórios"] },
+    { name: "Performance e SEO", tags: ["Core Web Vitals", "SEO técnico", "Acessibilidade"] },
   ],
 };
 
