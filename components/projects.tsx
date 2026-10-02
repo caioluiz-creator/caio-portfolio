@@ -17,6 +17,7 @@ export function Projects() {
               ))}
             </h2>
           </Reveal>
+          {projects.cta && (
           <Reveal delay={0.1}>
             <a
               href={projects.cta.href}
@@ -28,18 +29,19 @@ export function Projects() {
               </span>
             </a>
           </Reveal>
+          )}
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-2">
+        <div className="pilha mt-14 grid grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-2">
           {projects.items.map((item, i) => (
-            <Reveal key={item.name} delay={(i % 2) * 0.08}>
-              <a href={item.href} className="group block">
+            <Reveal key={item.name} delay={(i % 2) * 0.08} className="pilha-item">
+              <a href={item.href} target="_blank" rel="noopener noreferrer" className="pilha-cartao group block">
                 <div className="overflow-hidden rounded-[14px] bg-black/5">
                   <Image
                     src={item.image}
                     alt={item.name}
-                    width={582}
-                    height={401}
+                    width={1164}
+                    height={802}
                     className="h-auto w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                   />
                 </div>

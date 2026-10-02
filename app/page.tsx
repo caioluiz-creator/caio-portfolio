@@ -24,7 +24,7 @@ import { Footer } from "@/components/footer";
  * O conteudo delas continua em content.ts (projects e thoughts) e o
  * estilo esta inteiro nos componentes, entao voltam exatamente como eram.
  */
-// import { Projects } from "@/components/projects";
+import { Projects } from "@/components/projects";
 // import { Thoughts } from "@/components/thoughts";
 // import { Testimonials } from "@/components/testimonials";
 
@@ -36,7 +36,7 @@ export default function Home() {
         <HeroBio />
         <ScrollQuote />
         <Services />
-        {/* <Projects /> */}
+        <Projects />
         <Stack />
         {/* <Thoughts /> */}
         <Contact />

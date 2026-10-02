@@ -126,6 +126,70 @@ body::before {
   animation-play-state: paused;
 }
 
+/*
+  Projetos no celular: cartoes que empilham na rolagem (mesmo efeito da
+  secao "A loja" da landing Mega Manto). O cartao de cima fica preso no
+  topo e afunda enquanto o proximo sobe por cima. Desktop nao muda.
+*/
+@media (max-width: 767px) {
+  .pilha {
+    timeline-scope: --p1, --p2, --p3;
+  }
+  .pilha-item {
+    position: sticky;
+    top: 96px;
+  }
+  .pilha-item:nth-child(2) { top: 108px; }
+  .pilha-item:nth-child(3) { top: 120px; }
+  .pilha-item:nth-child(4) { top: 132px; }
+  .pilha-cartao {
+    padding-bottom: 20px;
+    border-radius: 14px;
+    background: var(--bg);
+    box-shadow: 0 -18px 40px -12px rgba(0, 0, 0, 0.18);
+    transform-origin: 50% 0;
+  }
+  .pilha-item:first-child .pilha-cartao {
+    box-shadow: none;
+  }
+
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .pilha-item:nth-child(2) { view-timeline-name: --p1; }
+      .pilha-item:nth-child(3) { view-timeline-name: --p2; }
+      .pilha-item:nth-child(4) { view-timeline-name: --p3; }
+      /* o cartao encolhe; so o conteudo escurece (o fundo continua claro) */
+      .pilha-item:nth-child(1) :is(.pilha-cartao, .pilha-cartao > *) { animation-timeline: --p1; }
+      .pilha-item:nth-child(2) :is(.pilha-cartao, .pilha-cartao > *) { animation-timeline: --p2; }
+      .pilha-item:nth-child(3) :is(.pilha-cartao, .pilha-cartao > *) { animation-timeline: --p3; }
+      .pilha-item:nth-child(-n + 3) :is(.pilha-cartao, .pilha-cartao > *) {
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-range: entry 10% cover 50%;
+      }
+      .pilha-item:nth-child(-n + 3) .pilha-cartao { animation-name: afunda; }
+      .pilha-item:nth-child(-n + 3) .pilha-cartao > * { animation-name: escurece; }
+      /* o ultimo cartao nao tem ninguem por cima, entao nao afunda */
+      .pilha-item:last-child :is(.pilha-cartao, .pilha-cartao > *) {
+        animation: none;
+      }
+    }
+  }
+}
+
+@keyframes afunda {
+  to {
+    transform: scale(0.93);
+  }
+}
+
+@keyframes escurece {
+  to {
+    filter: brightness(0.55);
+    opacity: 0.85;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -26,6 +26,7 @@ export const nav = {
     { label: "Início", href: "#inicio" },
     { label: "Sobre", href: "#sobre" },
     { label: "Serviços", href: "#servicos" },
+    { label: "Projetos", href: "#projetos" },
     { label: "Contato", href: "#contato" },
   ],
 };
@@ -71,12 +72,21 @@ export const services = {
  *  O conteudo fica guardado aqui para quando "Projetos em Destaque" voltar. */
 export const projects = {
   title: ["Projetos", "em Destaque"],
-  cta: { label: "Ver todos", href: "#contato" },
+  /** Botao "Ver todos": deixe null enquanto houver poucos projetos */
+  cta: null as { label: string; href: string } | null,
   items: [
-    { name: "Projeto Um", kind: "Landing Page", image: "/img/work-1.png", href: "#" },
-    { name: "Projeto Dois", kind: "Identidade Visual", image: "/img/work-2.png", href: "#" },
-    { name: "Projeto Três", kind: "Site Institucional", image: "/img/work-3.png", href: "#" },
-    { name: "Projeto Quatro", kind: "E-commerce", image: "/img/work-4.png", href: "#" },
+    {
+      name: "Mega Manto Sport",
+      kind: "Landing page com cupom via QR code · Projeto próprio",
+      image: "/img/work-megamanto.jpg",
+      href: "https://arenaimperador.megamanto.com/",
+    },
+    {
+      name: "Dra. Rosana Vecchi",
+      kind: "Link na bio · Estética e formação profissional",
+      image: "/img/work-rosana.jpg",
+      href: "https://drarosanabiosite.vercel.app/",
+    },
   ],
 };
 
@@ -159,6 +169,7 @@ export const footer = {
     { label: "Início", href: "#inicio" },
     { label: "Sobre", href: "#sobre" },
     { label: "Serviços", href: "#servicos" },
+    { label: "Projetos", href: "#projetos" },
     { label: "Contato", href: "#contato" },
   ],
   /** Palavra gigante no fim da página (use seu nome ou marca) */
