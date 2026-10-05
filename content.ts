@@ -76,16 +76,16 @@ export const projects = {
   cta: null as { label: string; href: string } | null,
   items: [
     {
+      name: "Dra. Rosana Vecchi",
+      kind: "Link na bio · Estética e formação profissional",
+      image: "/img/work-rosana-vecchi.jpg",
+      href: "https://bio.rosanavecchi.com.br/",
+    },
+    {
       name: "Mega Manto Sport",
       kind: "Landing page com cupom via QR code · Projeto próprio",
       image: "/img/work-megamanto.jpg",
       href: "https://arenaimperador.megamanto.com/",
-    },
-    {
-      name: "Dra. Rosana Vecchi",
-      kind: "Link na bio · Estética e formação profissional",
-      image: "/img/work-rosana.jpg",
-      href: "https://drarosanabiosite.vercel.app/",
     },
   ],
 };
