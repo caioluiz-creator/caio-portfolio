@@ -1,12 +1,9 @@
-# Configuração de publicação na Netlify.
-# O plugin oficial do Next.js cuida do build e das rotas.
+# Configuração de publicação na Netlify, mantida só enquanto o domínio migra
+# para a Cloudflare (ver wrangler.jsonc). O build gera HTML estático em out/.
 
 [build]
   command = "npm run build"
-  publish = ".next"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+  publish = "out"
 
 [build.environment]
   NODE_VERSION = "22"

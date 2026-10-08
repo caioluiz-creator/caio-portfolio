@@ -1,0 +1,11 @@
+// Publicação do site na Cloudflare (Workers só com arquivos estáticos).
+// O build é `npm run build`, que gera out/ pelo output: "export" do Next.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "caiobiolink",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
