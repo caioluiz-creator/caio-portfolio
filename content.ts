@@ -13,7 +13,7 @@ export const site = {
   title: "Caio Luiz | Portfólio",
   description:
     "Sites, sistemas sob medida e identidades digitais. Portfólio pessoal e link na bio.",
-  email: "nascimentocaio491@gmail.com",
+  email: "caioluizweb@gmail.com",
   /** WhatsApp: o link usa o formato internacional (55 + DDD + numero) */
   whatsapp: {
     numero: "(64) 9 9325-3890",
@@ -159,7 +159,7 @@ export const contact = {
     { label: "WhatsApp", href: "https://wa.me/5564993253890" },
     { label: "Instagram", href: "https://www.instagram.com/caiolzn_/" },
     { label: "GitHub", href: "https://github.com/caioluiz-creator" },
-    { label: "E-mail", href: "mailto:nascimentocaio491@gmail.com" },
+    { label: "E-mail", href: "mailto:caioluizweb@gmail.com" },
   ],
 };
 
